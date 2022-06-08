@@ -1,19 +1,19 @@
 using System;
 using System.Buffers;
 using System.Text;
-using System.Buffers.Text;
+//using System.Buffers.Text;
 
 namespace SuperSocket.ProtoBase
 {
 
     public static class Extensions
     {
-        public static string ReadString(ref this SequenceReader<byte> reader, long length = 0)
+        public static string ReadString(this SequenceReader<byte> reader, long length = 0)
         {
-            return ReadString(ref reader, Encoding.UTF8, length);
+            return ReadString(reader, Encoding.UTF8, length);
         }
         
-        public static string ReadString(ref this SequenceReader<byte> reader, Encoding encoding, long length = 0)
+        public static string ReadString(this SequenceReader<byte> reader, Encoding encoding, long length = 0)
         {
             if (length == 0)
                 length = reader.Remaining;
@@ -29,7 +29,7 @@ namespace SuperSocket.ProtoBase
                 reader.Advance(length);
             }
         }
-        public static bool TryReadBigEndian(ref this SequenceReader<byte> reader, out ushort value)
+        public static bool TryReadBigEndian(this SequenceReader<byte> reader, out ushort value)
         {
             value = 0;
 
@@ -46,7 +46,7 @@ namespace SuperSocket.ProtoBase
             return true;
         }
 
-        public static bool TryReadBigEndian(ref this SequenceReader<byte> reader, out uint value)
+        public static bool TryReadBigEndian(this SequenceReader<byte> reader, out uint value)
         {
             value = 0;
 
@@ -69,7 +69,7 @@ namespace SuperSocket.ProtoBase
             return true;
         }
 
-        public static bool TryReadBigEndian(ref this SequenceReader<byte> reader, out ulong value)
+        public static bool TryReadBigEndian(this SequenceReader<byte> reader, out ulong value)
         {
             value = 0;
 

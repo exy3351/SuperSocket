@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <Description>SuperSocket protocol decoding library.</Description>
-  </PropertyGroup>
+	<PropertyGroup>
+		<Description>SuperSocket protocol decoding library.</Description>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+		<PackageReference Include="System.Buffers" Version="4.5.1" />
+		<PackageReference Include="System.Runtime.Extensions" Version="4.3.1" />
+	</ItemGroup>
 </Project>
