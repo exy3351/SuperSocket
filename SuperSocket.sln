@@ -39,6 +39,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperSocket.Udp", "src\Supe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperSocket.GZip", "src\SuperSocket.GZip\SuperSocket.GZip.csproj", "{DEF97D4F-01BC-49E5-8B8B-D23C6652F80F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{A1FB045F-9638-4228-B272-43DAC9C06981}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
